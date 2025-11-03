@@ -15,6 +15,7 @@
 
     <xacro:include filename="$(find go2_description)/xacro/camera_gazebo.xacro"/>
 
+    <xacro:include filename="$(find ros2_livox_simulation)/urdf/mid360.xacro" />
 
 
     <!-- <xacro:stairs stairs="15" xpos="0" ypos="0" zpos="0" /> -->
@@ -138,4 +139,7 @@
 
     <xacro:d435_gazebo_plugin camera_name="camera"/>
 
+    <xacro:mid360 name="livox" parent="trunk" topic="mid360">
+      <origin xyz="0 0 0.08" rpy="0 0 0"/>
+    </xacro:mid360>
 </robot>
