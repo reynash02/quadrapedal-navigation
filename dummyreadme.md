@@ -43,3 +43,25 @@ ros2 launch rtabmap_ros rtabmap.launch.py \
  approx_sync:=false \
  frame_id:=camera_link \
  use_sim_time:=true
+
+
+
+
+
+
+
+ros2 launch go2_config rtabmap.launch.py \
+  rgb_topic:=/camera/color/image_raw \
+  depth_topic:=/camera/aligned_depth_to_color/image_raw \
+  camera_info_topic:=/camera/color/camera_info \
+  odom_topic:=/odom \
+  frame_id:=base_link \
+  rviz:=false \
+  visual_odometry:=false \
+  approx_sync:=true \
+  use_sim_time:=true \
+  imu_topic:=/imu/data \
+  args:='--delete_db_on_start' \
+  approx_sync_max_interval:=0.1 \
+  topic_queue_size:=30 \
+  sync_queue_size:=30

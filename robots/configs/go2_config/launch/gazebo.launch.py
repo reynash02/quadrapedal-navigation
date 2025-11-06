@@ -27,6 +27,9 @@ def generate_launch_description():
     descr_pkg_share = launch_ros.substitutions.FindPackageShare(
         package="go2_description"
     ).find("go2_description")
+    world_pkg_share = launch_ros.substitutions.FindPackageShare(
+        package="aws_robomaker_small_warehouse_world"
+    ).find("aws_robomaker_small_warehouse_world")
     joints_config = os.path.join(config_pkg_share, "config/joints/joints.yaml")
     ros_control_config = os.path.join(
         config_pkg_share, "/config/ros_control/ros_control.yaml"
@@ -34,7 +37,9 @@ def generate_launch_description():
     gait_config = os.path.join(config_pkg_share, "config/gait/gait.yaml")
     links_config = os.path.join(config_pkg_share, "config/links/links.yaml")
     default_model_path = os.path.join(descr_pkg_share, "xacro/robot.xacro")
-    default_world_path = os.path.join(config_pkg_share, "worlds/outdoor.world")
+    #default_world_path = os.path.join(config_pkg_share, "worlds/default.world")
+
+    default_world_path = os.path.join(world_pkg_share, "worlds/small_warehouse.sdf")
 
     declare_use_sim_time = DeclareLaunchArgument(
         "use_sim_time",
