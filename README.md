@@ -115,7 +115,7 @@ poses:
 
 ![Go2 Navigation Launch](.docs/navigation.png)
 
-[Localization Link ](https://www.youtube.com/watch?v=-PzVzCM6_YI)
+[Navigation Link ](https://www.youtube.com/watch?v=-PzVzCM6_YI)
 
 ---
 
