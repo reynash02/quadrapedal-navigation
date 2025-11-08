@@ -125,10 +125,12 @@ poses:
   linear velocity ~ 1.5 to 3
   angular velocity ~ 1.8 to 3.5
 3. Ensure the RMW middleware used is rmw_fastrtps_cpp. If not:
+```bash
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-4. If map does not load automatically during localization, uncheck and check the Map in display to reload it.
-5. To use a preloaded map, choose map destination as go2_ws/src/db/rtabmap.db
-6. If you get a syncing error, ensure ```use_sim_time=true``` for all nodes
+```
+5. If map does not load automatically during localization, uncheck and check the Map in display to reload it.
+6. To use a preloaded map, choose map destination as go2_ws/src/db/rtabmap.db
+7. If you get a syncing error, ensure ```use_sim_time=true``` for all nodes
 
 
 ## Resources:
